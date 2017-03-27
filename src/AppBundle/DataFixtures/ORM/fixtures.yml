@@ -1,0 +1,6 @@
+AppBundle\Entity\Book:
+  book_{1...10}:
+    name: <sentence()>
+    autor: <name()>
+    resume: <text(500)>
+    isbn: <numberBetween(1000000000, 9999999999)>
