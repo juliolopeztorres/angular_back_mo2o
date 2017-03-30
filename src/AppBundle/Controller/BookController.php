@@ -34,7 +34,7 @@ class BookController extends BaseController
      * @return \Symfony\Component\HttpFoundation\Response
      * @throws \LogicException
      * @Route("/books/new")
-     * @Method("POST")
+     * @Method({"POST", "OPTIONS"})
      */
     public function createAction(Request $request)
     {
@@ -56,7 +56,7 @@ class BookController extends BaseController
      * @return \Symfony\Component\HttpFoundation\Response
      * @throws \LogicException|NotFoundHttpException|\InvalidArgumentException|AlreadySubmittedException
      * @Route("/books/edit/{bookName}")
-     * @Method("PUT")
+     * @Method({"PUT", "OPTIONS"})
      */
     public function updateAction(Request $request, $bookName)
     {
@@ -86,7 +86,7 @@ class BookController extends BaseController
      * @return \Symfony\Component\HttpFoundation\Response
      * @throws \LogicException|NotFoundHttpException|\InvalidArgumentException
      * @Route("/books/remove/{bookName}")
-     * @Method("DELETE")
+     * @Method({"DELETE", "OPTIONS"})
      */
     public function deleteAction($bookName)
     {
