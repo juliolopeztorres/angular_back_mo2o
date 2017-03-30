@@ -22,7 +22,6 @@ class BookType extends AbstractType
     {
         $resolver->setDefaults(array(
             'data_class' => 'AppBundle\Entity\Book',
-            'is_edit' => false,
         ));
     }
 
